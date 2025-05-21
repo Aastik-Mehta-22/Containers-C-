@@ -1,0 +1,8 @@
+*map (collection of key-value pairs, sorted by keys, keys are unique) (Associative)
+
+map is a sorted associative container that contains key-value pairs with unique keys. Keys are sorted by using the comparison function Compare. Search, removal, and insertion operations have logarithmic complexity. Maps are usually implemented as Red–black trees
+
+
+-------------------------------------------------------
+
+*Multi Map

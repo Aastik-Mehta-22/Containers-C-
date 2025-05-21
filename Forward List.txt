@@ -1,0 +1,72 @@
+*Singly Linked List (Sequence) (forward_list)
+
+
+Understand by the code itself
+
+1) Basic Initialisation and Iteration
+
+#include <iostream>
+#include <forward_list>
+
+int main() {
+    std::forward_list<int> flist = {10, 20, 30, 40};
+
+    std::cout << "Initial elements:\n";
+    for (int val : flist) {
+        std::cout << val << " ";
+    }
+    std::cout << "\n";
+
+    return 0;
+}
+
+
+
+// Code with some operations on forward_list;
+
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <forward_list>
+
+using namespace std;
+
+int main()
+{
+    
+    forward_list<int> flist = {10,20,30,40};
+    
+   
+    flist.push_front(5);
+    
+    auto it = flist.begin();
+    
+     flist.insert_after(it ,15); // inserting after operation
+    
+    flist.erase_after(it); // removing after operation
+    
+    
+    
+    flist.sort(); // sort the list
+    
+    flist.unique(); //  unique elements
+    
+    flist.reverse(); // reverse the linked list
+    
+    for(auto ele : flist){
+        
+        cout<<ele<<" ";
+    }
+    cout<<endl;
+    
+    
+    
+  
+    return 0;
+}

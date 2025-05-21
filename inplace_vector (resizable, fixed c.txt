@@ -1,0 +1,17 @@
+* inplace_vector (resizable, fixed capacity, inplace contiguous array) (Sequence)
+
+It is a special type of dynamic array, like std::vector, but with some key differences:
+
+1) It stores elements inside itself, without using the heap.
+
+2) The maximum size is fixed at compile time (you choose a number N, and the vector can’t hold more than N elements).
+
+3) It's contiguous, meaning elements are stored next to each other in memory (just like an array).
+
+4) You can access elements like you would with a regular array — using [] or pointers.
+
+Special behaviors
+If you try to add more than N items, it throws std::bad_alloc.
+
+If N == 0, the vector is trivially copyable and behaves like an empty obj
+

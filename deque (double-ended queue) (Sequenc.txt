@@ -1,0 +1,33 @@
+*deque (double-ended queue) (Sequence)
+
+it allows fast insertion and deletion at both its beginning and its end. In addition, insertion or deletion from 
+deque never invalidates pointers or references to the rest of the elements.
+
+deque stores elements in separate blocks of memory.These blocks are not necessarily next to each other, but the deque keeps track where each block is
+
+Operation Complexities
+Random Access (by index): O(1) — Very fast, but a bit slower than std::vector because it involves two pointer dereferences.
+
+Adding/Removing at the Ends (front or back): O(1) — Very fast, thanks to the way it stores elements in blocks and doesn't need to shift everything around.
+
+Adding/Removing in the Middle: O(n) — Slower, because it has to shift elements around just like other containers (like std::vector).
+
+
+#include <iostream>
+#include <deque>
+
+int main() {
+    std::deque<int> dq = {2, 5, 10, 20, 30};
+
+    // Access elements by index
+    std::cout << "Element at index 2: " << dq[2] << std::endl; // Output: 10
+
+    // Accessing with at() for bounds checking
+    try {
+        std::cout << "Element at index 10: " << dq.at(10) << std::endl; // This will throw an exception
+    } catch (const std::out_of_range& e) {
+        std::cout << "Out of range error: " << e.what() << std::endl; // Handle out-of-range error
+    }
+
+    return 0;
+}

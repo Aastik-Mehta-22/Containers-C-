@@ -1,0 +1,32 @@
+* Set (Collection of Unique Keys, sorted by Keys) (Associative) 
+
+It Stores a collection of unique values,sorted automatically
+
+defined in the <set> header
+
+The values are always sorted using the comparison function (by default, in ascending order).
+
+Insert, Search and remove operations are fast(O(logN) time complexity
+
+They are implemented using a red-black tree
+
+* Supports Standard Container features
+
+Container - Basic storage of elements
+AllocatorAwareContainer - supports custom memory allocation
+AssociativeContainer - elements are accessed by key 
+ReversibleContainer - we can iterate forward and backward
+
+
+constexpr Support
+All member functions can be used in constexpr contexts (evaluated at compile time).
+
+But a whole std::set object usually can’t be fully constexpr, because:
+
+It uses dynamic memory allocation, which must be cleaned up within the same compile-time expression — this is often not possible.
+
+
+
+-----------------------------------------
+MultiSet (Stores duplicate values as well)
+
